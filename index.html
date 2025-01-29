@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Genshin Catch Game</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- Your custom CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+<body>
+    <div id="logo">Rfakira</div>
+    <div id="game-container">
+        <div id="target">
+            <img src="assets/img/download.jpg" alt="Yae Miko">
+            <div class="character-name">Yae Miko</div>
+        </div>
+        <div class="obstacle">
+            <img src="assets/img/★.jpg" alt="Raiden Ei">
+            <div class="character-name">Raiden Ei</div>
+        </div>
+        <div class="obstacle">
+            <img src="assets/img/★.jpg" alt="Raiden Ei">
+            <div class="character-name">Raiden Ei</div>
+        </div>
+        <div class="obstacle">
+            <img src="assets/img/★.jpg" alt="Raiden Ei">
+            <div class="character-name">Raiden Ei</div>
+        </div>
+    </div>
+    <div id="score-container" class="score-display">Score: <span id="score">0</span></div>
+    <div id="highscore-container" class="score-display">
+        High Score: <span id="highscore">0</span>
+        <div id="difficulty-label"></div>
+    </div>
+    <div id="timer-container" class="score-display">Time: <span id="timer">0:00</span></div>
+    
+    <div id="tutorial" class="popup">
+        <h2>Welcome to Genshin Catch!</h2>
+        <div class="tutorial-content">
+            <p><strong>Cara Bermain:</strong></p>
+            <p>1. Klik Yae Miko untuk mendapatkan poin</p>
+            <p>2. Hindari Raiden Ei atau game over!</p>
+            <p>3. Kedua karakter akan berpindah tempat setiap:</p>
+            <ul>
+                <li>Yae Miko diklik</li>
+                <li>Berdasarkan tingkat kesulitan yang dipilih</li>
+            </ul>
+            <p>4. Dapatkan skor setinggi mungkin sebelum waktu habis!</p>
+        </div>
+        <div class="credit">Created by @rafasigma & @MayaAgnessa</div>
+        <button onclick="showDifficultySelection()">MULAI BERMAIN!</button>
+    </div>
+
+    <div id="difficulty-popup" class="popup">
+        <h2>Pilih Tingkat Kesulitan</h2>
+        <div class="difficulty-options">
+            <button onclick="selectDifficulty('easy')">Mudah</button>
+            <button onclick="selectDifficulty('medium')">Medium</button>
+            <button onclick="selectDifficulty('sigma')">Sigma</button>
+        </div>
+    </div>
+
+    <div id="timer-popup" class="popup">
+        <h2>Pilih Waktu Bermain</h2>
+        <div class="timer-options">
+            <button onclick="startGameWithTimer(30)">30 Detik</button>
+            <button onclick="startGameWithTimer(45)">45 Detik</button>
+            <button onclick="startGameWithTimer(60)">1 Menit</button>
+        </div>
+    </div>
+
+    <div id="game-over" class="popup">
+        <h2>Game Over!</h2>
+        <p>Your Score: <span id="final-score">0</span></p>
+        <p>High Score: <span id="final-highscore">0</span></p>
+        <p>Difficulty: <span id="final-difficulty"></span></p>
+        <button onclick="showDifficultySelection()">MAIN LAGI</button>
+    </div>
+    <script src="assets/java/script.js"></script>
+</body>
+</html>
